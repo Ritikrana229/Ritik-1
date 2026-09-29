@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM ARMY OFFICIAL - VIP ACCESS</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #080c14;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #0d131d;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 183, 255, 0.1);
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* VIP Access Tag */
+        .vip-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #00f2ff;
+            color: #00f2ff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2ff;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #00f2ff;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        /* Logo Container */
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg, #00f2ff, #0066ff);
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 15px rgba(0, 242, 255, 0.4); }
+            100% { box-shadow: 0 0 30px rgba(0, 242, 255, 0.8); }
+        }
+
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Title & Subtitle */
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .verified-icon {
+            color: #00a2ff;
+            font-size: 18px;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .stat-box {
+            background: #151d2a;
+            border: 1px solid #1e2d42;
+            padding: 12px 8px;
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffb703;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        /* CTA Button */
+        .btn-container {
+            margin-bottom: 15px;
+        }
+
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background: linear-gradient(90deg, #ffb703, #fb8500);
+            color: #000;
+            font-weight: 800;
+            font-size: 16px;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(251, 133, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: bounce 2s infinite;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(251, 133, 0, 0.6);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-6px); }
+            60% { transform: translateY(-3px); }
+        }
+
+        .btn-status {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .agency-tag {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .live-members {
+            font-size: 13px;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        /* Disclaimer Section */
+        .disclaimer {
+            border-top: 1px solid #1e293b;
+            padding-top: 15px;
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- VIP Access Active Tag -->
+        <div class="vip-tag">
+            <span class="dot"></span> VIP ACCESS ACTIVE
+        </div>
+
+        <!-- Logo Container -->
+        <div class="logo-container">
+            <!-- आपका भेजा हुआ लोगो -->
+            <img src="594.jpg" alt="Logo" class="logo-img">
+        </div>
+
+        <!-- Channel Title -->
+        <div class="title">
+            SYSTEM ARMY OFFICIAL <i class="fa-solid fa-circle-check verified-icon"></i>
+        </div>
+        <div class="subtitle">Join Official Telegram VIP Channel</div>
+
+        <!-- Stats Section -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Members</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">FREE</div>
+                <div class="stat-label">Entry</div>
+            </div>
+        </div>
+
+        <!-- Telegram CTA Button -->
+        <div class="btn-container">
+            <a href="https://t.me/+4q7IitTVB3lhZGY1" id="telegramLink" class="cta-btn" onclick="handleButtonClick(event)">
+                <i class="fa-solid fa-bolt"></i> JOIN TELEGRAM NOW <i class="fa-solid fa-bolt"></i>
+            </a>
+        </div>
+
+        <div class="btn-status">YOUR FREE ACCESS IS READY ⚡</div>
+        <div class="agency-tag">Ads Managed By @RADHEADSAGENCY</div>
+
+        <div class="live-members">
+            <span class="dot"></span> 10K+ MEMBERS IN THE COMMUNITY
+        </div>
+
+        <!-- Bottom Disclaimer Section -->
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This channel is for educational purposes only. 18+ only. Joining or following the tips provided is strictly at your own risk. We do not promote or encourage any illegal activity or financial speculation.
+        </div>
+    </div>
+
+    <script>
+        // आपका टेलीग्राम लिंक डायरेक्ट यहाँ सेट है:
+        const TELEGRAM_CHANNEL_URL = "https://t.me/+4q7IitTVB3lhZGY1";
+
+        // Anti-Bot & Fake Click Protection
+        function isBot() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const botPattern = /bot|googlebot|crawler|spider|robot|crawling|facebookexternalhit|headlesschrome/i;
+            
+            // 1. Checking common bot user agents
+            if (botPattern.test(userAgent)) return true;
+            
+            // 2. Checking automation flags (Puppeteer/Selenium)
+            if (navigator.webdriver) return true;
+
+            return false;
+        }
+
+        function handleButtonClick(event) {
+            event.preventDefault();
+
+            // बॉट और फेक क्लिक्स रोकने की सुरक्षा जाँच
+            if (isBot()) {
+                console.warn("Bot activity detected. Redirect blocked.");
+                return false;
+            }
+
+            // रियल यूजर को डायरेक्ट टेलीग्राम लिंक पर रिडायरेक्ट करना
+            window.location.href = TELEGRAM_CHANNEL_URL;
+        }
+    </script>
+</body>
+</html>
